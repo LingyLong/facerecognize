@@ -1,0 +1,7 @@
+g++ --std=c++11 -o caffe_test main.cpp extractfeature.cpp `pkg-config --cflags --libs opencv`  -D CPU_ONLY -D USE_OPENCV -lboost_system -lcaffe -lglog -lprotobuf
+
+
+g++ --std=c++11 -o facerecognize winface.cpp facewindow.cpp extractfeature.cpp util.cpp extract_name.cpp `pkg-config --cflags --libs opencv gtkmm-3.0`  -D CPU_ONLY -D USE_OPENCV -lboost_system -lcaffe -lglog -lprotobuf -lflandmark -lclandmark
+
+g++ --std=c++11 -o facerecognize winface.cpp facewindow.cpp extractfeature.cpp util.cpp extract_name.cpp worker.cpp `pkg-config --cflags --libs opencv gtkmm-3.0`  -D CPU_ONLY -D USE_OPENCV -lboost_system -lcaffe -lglog -lprotobuf
+
